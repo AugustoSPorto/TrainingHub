@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>New Training Enrollment</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Training Enrollment</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">747fc2bc9d12321055903da570aff023</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 16:36:35</sys_created_on>
+        <sys_id>8a8145e9833403107bfa9470ceaad378</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Training Enrollment</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_wizard_answer_8a8145e9833403107bfa9470ceaad378</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 16:36:35</sys_updated_on>
+        <table/>
+        <target_url>x_1960572_training_enrollment.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

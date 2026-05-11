@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0a8145e9833403107bfa9470ceaad353" extends="task" label="Training Enrollment" max_length="40" name="x_1960572_training_enrollment" type="collection">
+        <element label="Auto Approval" max_length="255" name="auto_approval" type="boolean"/>
+        <element label="Schedule" max_length="32" name="schedule" reference="x_1960572_training_schedule" type="reference"/>
+    </element>
+</database>
