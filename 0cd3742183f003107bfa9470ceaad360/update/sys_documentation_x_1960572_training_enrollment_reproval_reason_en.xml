@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="schedules" label="Schedules" language="en" table="x_1960572_training_course">
+    <sys_documentation element="reproval_reason" label="Reproval Reason" language="en" table="x_1960572_training_enrollment">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>schedules</element>
+            <element>reproval_reason</element>
             <help/>
             <hint/>
-            <label>Schedules</label>
+            <label>Reproval Reason</label>
             <language>en</language>
-            <name>x_1960572_training_course</name>
+            <name>x_1960572_training_enrollment</name>
             <plural/>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-11 16:41:29</sys_created_on>
+            <sys_created_on>2026-05-11 18:56:13</sys_created_on>
             <sys_mod_count>3</sys_mod_count>
-            <sys_name>Schedules</sys_name>
+            <sys_name>Reproval Reason</sys_name>
             <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
             <sys_policy/>
             <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
-            <sys_update_name>sys_documentation_x_1960572_training_course_schedules_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_1960572_training_enrollment_reproval_reason_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-11 16:41:30</sys_updated_on>
+            <sys_updated_on>2026-05-11 18:56:13</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

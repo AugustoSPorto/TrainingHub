@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="7021c5a9833403107bfa9470ceaad388" label="Training Course" max_length="40" name="x_1960572_training_course" type="collection">
         <element label="Description PT (BR)" max_length="4000" name="description_br" type="string"/>
-        <element label="Integration State" max_length="40" name="integration_state" type="glide_date"/>
+        <element choice="1" label="Integration State" max_length="40" name="integration_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Integration Failure" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Starting" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Integrating" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Integration Success" sequence="2" value="3"/>
+            </choice>
+        </element>
         <element label="Description EN (US)" max_length="4000" name="description_us" type="string"/>
         <element label="Name" max_length="250" name="name" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="Schedules" max_length="1024" name="schedules" reference="x_1960572_training_schedule" type="glide_list"/>
-        <element label="Integration Error Message" max_length="40" name="integration_error_message" type="glide_date"/>
+        <element label="Integration Error Message" max_length="1000" name="integration_error_message" type="string"/>
     </element>
 </database>

@@ -4,13 +4,83 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-05-11 16:30:23</sys_created_on>
-            <sys_id>cb1089e1833403107bfa9470ceaad395</sys_id>
+            <sys_created_on>2026-05-11 18:47:35</sys_created_on>
+            <sys_id>f08f516183b003107bfa9470ceaad37d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1960572_training_schedule" sys_domain="global" view="Default view">c31089e1833403107bfa9470ceaad390</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-05-11 16:30:23</sys_updated_on>
+            <sys_updated_on>2026-05-11 18:47:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>course</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:47:35</sys_created_on>
+            <sys_id>708f516183b003107bfa9470ceaad37e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1960572_training_schedule" sys_domain="global" view="Default view">c31089e1833403107bfa9470ceaad390</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:47:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_seats</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:47:35</sys_created_on>
+            <sys_id>fc8f516183b003107bfa9470ceaad37e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1960572_training_schedule" sys_domain="global" view="Default view">c31089e1833403107bfa9470ceaad390</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:47:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:47:35</sys_created_on>
+            <sys_id>7c8f516183b003107bfa9470ceaad37f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1960572_training_schedule" sys_domain="global" view="Default view">c31089e1833403107bfa9470ceaad390</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:47:35</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:47:35</sys_created_on>
+            <sys_id>f88f516183b003107bfa9470ceaad380</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1960572_training_schedule" sys_domain="global" view="Default view">c31089e1833403107bfa9470ceaad390</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:47:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>instructor</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:47:35</sys_created_on>
+            <sys_id>788f516183b003107bfa9470ceaad381</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1960572_training_schedule" sys_domain="global" view="Default view">c31089e1833403107bfa9470ceaad390</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:47:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
