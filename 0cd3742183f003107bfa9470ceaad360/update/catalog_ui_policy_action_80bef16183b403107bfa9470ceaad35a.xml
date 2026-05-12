@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Request Enrollment">bd25b16d833403107bfa9470ceaad3f9</catalog_item>
+        <catalog_variable>IO:3988f525837403107bfa9470ceaad35d</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:03:55</sys_created_on>
+        <sys_id>80bef16183b403107bfa9470ceaad35a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>course</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_80bef16183b403107bfa9470ceaad35a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:03:55</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Mandatory Catalog Fields.">319e316183b403107bfa9470ceaad321</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>course</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=80bef16183b403107bfa9470ceaad35a"/>
+</record_update>

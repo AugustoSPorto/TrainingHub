@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="7e10cde5833403107bfa9470ceaad3db" label="Training Schedule" max_length="40" name="x_1960572_training_schedule" type="collection">
-        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" type="reference"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" reference_qual="javascript:new x_1960572_training.TrainingHubUtils().refQualInstructor();" type="reference" use_reference_qualifier="advanced"/>
         <element label="Occupied Seats" max_length="40" name="occupied_seats" type="integer"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Number of Seats" max_length="40" name="max_seats" type="integer"/>

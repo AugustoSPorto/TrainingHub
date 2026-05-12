@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1960572_training.TrainingHubUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Server-side utilities for TrainingHub business logic, record producer filters, and relationship validations.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>TrainingHubUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TrainingHubUtils = Class.create();
+TrainingHubUtils.prototype = {
+    initialize: function() {},
+
+    getAvailableSchedules: function(courseId) {
+        var validSchedules = [];
+
+        // Se o usuário ainda não escolheu um curso, retorna uma lista vazia
+        if (!courseId) {
+            return "sys_idIN"; 
+        }
+
+		// Se o curso mudar, limpa o schedule para forçar o usuário a escolher um novo
+		// Isso evita que ele envie o formulário com um schedule que não pertence ao curso
+		if (newValue != oldValue) {
+			g_form.setValue('schedule', '');
+		}
+
+        var grSchedule = new GlideRecord("x_1960572_training_schedule");
+        
+        // Regra 1: Filtrar pelo Curso selecionado
+        grSchedule.addQuery("course", courseId);
+        
+        // Regra 2: A data deve ser pelo menos 1 dia no futuro
+        // Pega a data de amanhã como limite mínimo
+        grSchedule.addEncodedQuery("date>=javascript:gs.daysAgoStart(-1)");
+        
+        grSchedule.query();
+
+        while (grSchedule.next()) {
+            var maxSeats = parseInt(grSchedule.getValue("max_seats"), 10) || 0;
+            var occupiedSeats = parseInt(grSchedule.getValue("occupied_seats"), 10) || 0;
+
+            // Regra 3: Só adiciona na lista se ainda houver vaga
+            if (occupiedSeats < maxSeats) {
+                validSchedules.push(grSchedule.getUniqueValue());
+            }
+        }
+
+        // Retorna a string no formato esperado pelo Reference Qualifier
+        return "sys_idIN" + validSchedules.join(",");
+    },
+
+    type: 'TrainingUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:27:25</sys_created_on>
+        <sys_id>39b3cee983b403107bfa9470ceaad38d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>TrainingHubUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_script_include_39b3cee983b403107bfa9470ceaad38d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:39:15</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_script_include_39b3cee983b403107bfa9470ceaad38d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1960572_training.TrainingHubUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Server-side utilities for TrainingHub business logic, record producer filters, and relationship validations.&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;TrainingHubUtils&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var TrainingHubUtils = Class.create();
+TrainingHubUtils.prototype = {
+    initialize: function() {},
+
+    getAvailableSchedules: function(courseId) {
+        var validSchedules = [];
+
+        // Se o usuário ainda não escolheu um curso, retorna uma lista vazia
+        if (!courseId) {
+            return "sys_idIN"; 
+        }
+
+		// Se o curso mudar, limpa o schedule para forçar o usuário a escolher um novo
+		// Isso evita que ele envie o formulário com um schedule que não pertence ao curso
+		if (newValue != oldValue) {
+			g_form.setValue('schedule', '');
+		}
+
+        var grSchedule = new GlideRecord("x_1960572_training_schedule");
+        
+        // Regra 1: Filtrar pelo Curso selecionado
+        grSchedule.addQuery("course", courseId);
+        
+        // Regra 2: A data deve ser pelo menos 1 dia no futuro
+        // Pega a data de amanhã como limite mínimo
+        grSchedule.addEncodedQuery("date&gt;=javascript:gs.daysAgoStart(-1)");
+        
+        grSchedule.query();
+
+        while (grSchedule.next()) {
+            var maxSeats = parseInt(grSchedule.getValue("max_seats"), 10) || 0;
+            var occupiedSeats = parseInt(grSchedule.getValue("occupied_seats"), 10) || 0;
+
+            // Regra 3: Só adiciona na lista se ainda houver vaga
+            if (occupiedSeats &lt; maxSeats) {
+                validSchedules.push(grSchedule.getUniqueValue());
+            }
+        }
+
+        // Retorna a string no formato esperado pelo Reference Qualifier
+        return "sys_idIN" + validSchedules.join(",");
+    },
+
+    type: 'TrainingUtils'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-11 21:27:25&lt;/sys_created_on&gt;&lt;sys_id&gt;39b3cee983b403107bfa9470ceaad38d&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;TrainingHubUtils&lt;/sys_name&gt;&lt;sys_package display_value="Training Hub" source="x_1960572_training"&gt;0cd3742183f003107bfa9470ceaad360&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Training Hub"&gt;0cd3742183f003107bfa9470ceaad360&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_39b3cee983b403107bfa9470ceaad38d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-11 21:39:15&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-833231189</payload_hash>
+        <record_name>TrainingHubUtils</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:39:15</sys_created_on>
+        <sys_id>afc64e6183f403107bfa9470ceaad37c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e18fae0cd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:39:15</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>2fc64e6177f4031013a036999b53c67b</update_guid>
+        <update_guid_history>2fc64e6177f4031013a036999b53c67b:-833231189,58c60e613cf403107eb7f497e83437d5:290713630,c996426121f403101ec622202f567119:-1842899792,1e140a2d0fb403106233efca14f14cff:1484117987</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:46:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0621e1a087b4493c854369de38c3af10</sys_id>
+        <sys_metadata>39b3cee983b403107bfa9470ceaad38d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TrainingHubUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_script_include_39b3cee983b403107bfa9470ceaad38d</sys_update_name>
+        <sys_update_version display_value="sys_script_include_39b3cee983b403107bfa9470ceaad38d">afc64e6183f403107bfa9470ceaad37c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:46:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

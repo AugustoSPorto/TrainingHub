@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1960572_training.TrainingHubUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Utility functions for TrainingHub reference qualifiers and business logic reuse across the application.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>TrainingHubUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TrainingHubUtils = Class.create();
+TrainingHubUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    
+    // Returns only active users with the instructor role for the schedule form
+    refQualInstructor: function() {
+        var instructorsToShow = [];
+        var grUserRole = new GlideRecord("sys_user_has_role");
+        grUserRole.addQuery("role.name", "x_1960572_training.instructor");
+        grUserRole.addQuery("user.active", true);
+        grUserRole.query();
+
+        while (grUserRole.next()) {
+            instructorsToShow.push(grUserRole.getValue("user"));
+        }
+
+        // No valid instructors found 
+        if (instructorsToShow.length == 0) {
+            return "sys_id=NULL";
+        }
+
+        return "sys_idIN" + instructorsToShow.join(",");
+    },
+
+    // Reference Qualifier for Schedules
+    refQualSchedule: function(courseId) {
+        if (!courseId) {
+            return "sys_id=NULL";
+        }
+
+        var schedulesToShow = [];
+
+        var grSchedule = new GlideRecord("x_1960572_training_schedule");
+        grSchedule.addQuery("course", courseId);
+        
+        // Calculate tomorrow to enforce the 1-day enrollment deadline
+        var tomorrow = new GlideDateTime();
+		tomorrow.addDaysLocalTime(1);
+		// Filters out past dates and schedules within 1 day (STRY 11)
+        grSchedule.addQuery("date", ">", tomorrow.getValue());
+
+		// Skip schedules where user is the instructor (STRY 10)
+		grSchedule.addQuery("instructor", "!=", gs.getUserID());
+
+        grSchedule.query();
+
+        while (grSchedule.next()) {
+            var occupied = parseInt(grSchedule.getValue("occupied_seats") || 0);
+            var max = parseInt(grSchedule.getValue("max_seats") || 0);
+
+            // Only include schedules that still have open slots (STRY 9)
+            if (occupied < max) {
+                schedulesToShow.push(grSchedule.getUniqueValue());
+            }
+        }
+
+        if (schedulesToShow.length == 0) {
+            return "sys_id=NULL";
+        }
+
+        return "sys_idIN" + schedulesToShow.join(",");
+    },
+
+	
+    type: 'TrainingHubUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 01:50:07</sys_created_on>
+        <sys_id>54efba2183bc03107bfa9470ceaad300</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>TrainingHubUtils</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_script_include_54efba2183bc03107bfa9470ceaad300</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 04:54:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

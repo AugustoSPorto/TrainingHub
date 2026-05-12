@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="Request Enrollment">bd25b16d833403107bfa9470ceaad3f9</catalog_item>
+        <catalog_variable>IO:f71875e1837403107bfa9470ceaad3b0</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:09:18</sys_created_on>
+        <sys_id>d7efb12583b403107bfa9470ceaad3fa</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>schedule</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_d7efb12583b403107bfa9470ceaad3fa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:09:41</sys_updated_on>
+        <table/>
+        <ui_policy display_value="a">92dffde183b403107bfa9470ceaad32a</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>schedule</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=d7efb12583b403107bfa9470ceaad3fa"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>catalog_ui_policy_action_d7efb12583b403107bfa9470ceaad3fa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item display_value="Request Enrollment">bd25b16d833403107bfa9470ceaad3f9</catalog_item><catalog_variable>IO:f71875e1837403107bfa9470ceaad3b0</catalog_variable><cleared>false</cleared><disabled>true</disabled><field/><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 21:09:18</sys_created_on><sys_id>d7efb12583b403107bfa9470ceaad3fa</sys_id><sys_mod_count>3</sys_mod_count><sys_name>schedule</sys_name><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_update_name>catalog_ui_policy_action_d7efb12583b403107bfa9470ceaad3fa</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 21:09:41</sys_updated_on><table/><ui_policy display_value="a">92dffde183b403107bfa9470ceaad32a</ui_policy><value/><value_action>ignore</value_action><variable>schedule</variable><variable_set/><visible>ignore</visible></catalog_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=d7efb12583b403107bfa9470ceaad3fa"/></record_update>]]></payload>
+        <payload_hash>-1763655397</payload_hash>
+        <record_name>schedule</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:09:41</sys_created_on>
+        <sys_id>ae00862583b403107bfa9470ceaad3f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e18dfcfa90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:09:41</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>2e008625e7b40310a57cc5ba0f9732f4</update_guid>
+        <update_guid_history>2e008625e7b40310a57cc5ba0f9732f4:-1763655397,000046253db4031079efdfd44b556fca:1454210746,feff352560b403103b3ed0e2e7354bbb:158971196,b0fff125dcb40310adbb98af191f0da2:-1763655397</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="schedule">8050826583b403107bfa9470ceaad337</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 21:10:53</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>01d3975a2e814604801052ab90fd3d99</sys_id>
+        <sys_metadata>d7efb12583b403107bfa9470ceaad3fa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>schedule</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_d7efb12583b403107bfa9470ceaad3fa</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_d7efb12583b403107bfa9470ceaad3fa">ae00862583b403107bfa9470ceaad3f5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 21:10:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
