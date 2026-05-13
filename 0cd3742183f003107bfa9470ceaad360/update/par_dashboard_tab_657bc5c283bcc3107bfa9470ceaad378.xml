@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_tab">
+    <par_dashboard_tab action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <background_color/>
+        <dashboard display_value="TrainingHub Dashboard">ac2b81c283bcc3107bfa9470ceaad376</dashboard>
+        <name>Pending Work Overview</name>
+        <order>0</order>
+        <sys_class_name>par_dashboard_tab</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 06:36:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>657bc5c283bcc3107bfa9470ceaad378</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Pending Work Overview</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>par_dashboard_tab_657bc5c283bcc3107bfa9470ceaad378</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 07:07:06</sys_updated_on>
+    </par_dashboard_tab>
+</record_update>

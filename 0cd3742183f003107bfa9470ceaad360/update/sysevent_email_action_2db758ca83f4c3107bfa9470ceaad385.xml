@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_1960572_training_enrollment</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description>Sent to the user when their manager rejects the enrollment request, informing them that their seat has not been confirmed.</description>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>triggered</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-size: 10pt;">Hello ${opened_by.name},</span></p>
+<p><span style="font-size: 10pt;">Unfortunately, your enrollment request for the training below has been <strong>rejected </strong>by your manager.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;"><strong>Reproval reason:</strong></span></p>
+<p><span style="font-size: 10pt;"><strong>${reproval_reason}</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;">If you have any questions, please reach out to your manager directly.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;"><strong>Schedule Details:</strong></span></p>
+<ul style="list-style-position: inside;">
+<li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Course:</strong> ${schedule.course.name}</span></li>
+<li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Instructor:</strong> ${schedule.instructor.name}</span></li>
+<li style="font-size: 10pt;"><span style="font-size: 10pt;"><strong>Date:</strong> ${schedule.date}</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;">Best regards,</span><br><span style="font-size: 10pt;">TrainingHub Team</span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Enrollment Reproved</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>opened_by</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>${number} - Training Enrollment Reproved (${schedule.course.name})</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 02:52:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2db758ca83f4c3107bfa9470ceaad385</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Enrollment Reproved</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sysevent_email_action_2db758ca83f4c3107bfa9470ceaad385</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 04:31:56</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

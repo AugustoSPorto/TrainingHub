@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow report_view for instructor in x_1960572_training_schedule, for users with role x_1960572_training.administrator.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1960572_training_schedule.instructor</name>
+        <operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 07:10:22</sys_created_on>
+        <sys_id>baf2194683fcc3107bfa9470ceaad360</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1960572_training_schedule.instructor</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_security_acl_baf2194683fcc3107bfa9470ceaad360</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 07:17:34</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_security_acl_baf2194683fcc3107bfa9470ceaad360</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description>Allow report_view for instructor in x_1960572_training_schedule, for users with role x_1960572_training.administrator.</description><local_or_existing>Local</local_or_existing><name>x_1960572_training_schedule.instructor</name><operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-13 07:10:22</sys_created_on><sys_id>baf2194683fcc3107bfa9470ceaad360</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_1960572_training_schedule.instructor</sys_name><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_update_name>sys_security_acl_baf2194683fcc3107bfa9470ceaad360</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-13 07:17:34</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>1788362250</payload_hash>
+        <record_name>x_1960572_training_schedule.instructor</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 07:17:34</sys_created_on>
+        <sys_id>38c4194a83fcc3107bfa9470ceaad367</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e2032b3ac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 07:17:34</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>b4c4194a0afcc3108973761b34d56d66</update_guid>
+        <update_guid_history>b4c4194a0afcc3108973761b34d56d66:1788362250,49c355c6a0fcc310dd0f8d4e3bfbaf7d:716714473,5f135d4674fcc310c722a09734b8ea38:1109085598</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 07:19:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>059001fcc1414cf78021fdafff013301</sys_id>
+        <sys_metadata>baf2194683fcc3107bfa9470ceaad360</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1960572_training_schedule.instructor</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent display_value="Instructor">35a30ded833403107bfa9470ceaad3aa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_security_acl_baf2194683fcc3107bfa9470ceaad360</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_baf2194683fcc3107bfa9470ceaad360">38c4194a83fcc3107bfa9470ceaad367</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 07:19:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
