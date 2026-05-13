@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description>Centralized application menu for the TrainingHub platform, providing access to course catalogs, instructor schedules, and user enrollment records.</description>
+        <device_type>browser</device_type>
+        <hint>Access training courses, schedules, and enrollments.</hint>
+        <name/>
+        <order>100</order>
+        <roles>x_1960572_training.administrator,x_1960572_training.instructor,admin</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 19:25:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9118a5a183f003107bfa9470ceaad3ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>TrainingHub</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_app_application_9118a5a183f003107bfa9470ceaad3ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 19:35:07</sys_updated_on>
+        <title>TrainingHub</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_app_application_9118a5a183f003107bfa9470ceaad3ca</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description>Centralized application menu for the TrainingHub platform, providing access to course catalogs, instructor schedules, and user enrollment records.</description><device_type>browser</device_type><hint>Access training courses, schedules, and enrollments.</hint><name/><order>100</order><roles>x_1960572_training.administrator,x_1960572_training.instructor,admin</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 19:25:48</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9118a5a183f003107bfa9470ceaad3ca</sys_id><sys_mod_count>1</sys_mod_count><sys_name>TrainingHub</sys_name><sys_overrides/><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_update_name>sys_app_application_9118a5a183f003107bfa9470ceaad3ca</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 19:35:07</sys_updated_on><title>TrainingHub</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>246566490</payload_hash>
+        <record_name>TrainingHub</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 19:35:07</sys_created_on>
+        <sys_id>d56aa1e583f003107bfa9470ceaad337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e18893d540000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 19:35:07</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>196aa1e585f0031034644de653e9c436</update_guid>
+        <update_guid_history>196aa1e585f0031034644de653e9c436:246566490,f84821a1cdf00310a3fb38ac6cd88090:-1892140937</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="TrainingHub">b795927d83f483107bfa9470ceaad361</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 17:22:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>1bcc8a58ebfe41f9b191c590971fb779</sys_id>
+        <sys_metadata>9118a5a183f003107bfa9470ceaad3ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TrainingHub</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_app_application_9118a5a183f003107bfa9470ceaad3ca</sys_update_name>
+        <sys_update_version display_value="sys_app_application_9118a5a183f003107bfa9470ceaad3ca">d56aa1e583f003107bfa9470ceaad337</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 17:22:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

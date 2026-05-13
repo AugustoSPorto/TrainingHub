@@ -5,37 +5,37 @@
         <assessment/>
         <device_type/>
         <filter/>
-        <hint>List of courses available on the platform</hint>
+        <hint>All instructor's enrollment requests and their approval status</hint>
         <homepage/>
         <image/>
-        <link_type>LIST</link_type>
+        <link_type>SEPARATOR</link_type>
         <map_page/>
-        <mobile_title>Courses</mobile_title>
+        <mobile_title>Enrollments</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_1960572_training_course</name>
-        <order>100</order>
+        <name/>
+        <order>800</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
         <require_confirmation>true</require_confirmation>
-        <roles>x_1960572_training.administrator</roles>
+        <roles>x_1960572_training.instructor</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-05-11 19:27:14</sys_created_on>
+        <sys_created_on>2026-05-12 15:20:18</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>948861e183f003107bfa9470ceaad349</sys_id>
+        <sys_id>42a9bdb5833483107bfa9470ceaad3d1</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>Courses</sys_name>
+        <sys_name>My Schedule's Enrollments</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
-        <sys_update_name>sys_app_module_948861e183f003107bfa9470ceaad349</sys_update_name>
+        <sys_update_name>sys_app_module_42a9bdb5833483107bfa9470ceaad3d1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-12 15:33:05</sys_updated_on>
+        <sys_updated_on>2026-05-12 15:34:05</sys_updated_on>
         <timeline_page/>
-        <title>Courses</title>
+        <title>My Schedule's Enrollments</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

@@ -12,6 +12,30 @@
         <script><![CDATA[var TrainingHubUtils = Class.create();
 TrainingHubUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     
+	// Checks if a schedule already exists for the same course and date (STRY 3)
+	checkDuplicateDate: function() {
+        var courseId = this.getParameter('sysparm_course');
+        var selectedDate = this.getParameter('sysparm_date'); 
+        var scheduleId = this.getParameter('sysparm_id');
+
+        // Querying all schedules for the selected course. 
+        var gr = new GlideRecord('x_1960572_training_schedule');
+        gr.addQuery('course', courseId);        
+        gr.query();
+        
+        while (gr.next()) {
+            // Ignore the current record if we are updating an existing schedule
+            if (scheduleId && gr.getUniqueValue() == scheduleId) {
+                continue;
+            }
+            // Compare the inputted date with both display value and internal value of saved records
+            if (gr.getDisplayValue('date') == selectedDate || gr.getValue('date') == selectedDate) {
+                return "true"; // Duplicate found
+            }
+        }
+        return "false"; // No duplicate found, safe to proceed
+    },
+
     // Returns only active users with the instructor role for the schedule form
     refQualInstructor: function() {
         var instructorsToShow = [];
@@ -78,13 +102,13 @@ TrainingHubUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-12 01:50:07</sys_created_on>
         <sys_id>54efba2183bc03107bfa9470ceaad300</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>TrainingHubUtils</sys_name>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
         <sys_update_name>sys_script_include_54efba2183bc03107bfa9470ceaad300</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-12 04:54:04</sys_updated_on>
+        <sys_updated_on>2026-05-12 21:10:56</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="TrainingHub">9118a5a183f003107bfa9470ceaad3ca</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_1960572_training_schedule">instructorDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="instructor" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint>List of scheduled sessions for each course of the instructor</hint>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>My Schedules</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1960572_training_schedule</name>
+        <order>150</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_1960572_training.instructor</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 14:54:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1683f1b983f083107bfa9470ceaad3cb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>My Schedules</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_app_module_1683f1b983f083107bfa9470ceaad3cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 14:55:53</sys_updated_on>
+        <timeline_page/>
+        <title>My Schedules</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_app_module_1683f1b983f083107bfa9470ceaad3cb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="TrainingHub">9118a5a183f003107bfa9470ceaad3ca</application><assessment/><device_type/><filter table="x_1960572_training_schedule">instructorDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="instructor" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><hint>List of scheduled sessions for each course of the instructor</hint><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>My Schedules</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1960572_training_schedule</name><order>150</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_1960572_training.instructor</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-12 14:54:19</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1683f1b983f083107bfa9470ceaad3cb</sys_id><sys_mod_count>1</sys_mod_count><sys_name>My Schedules</sys_name><sys_overrides/><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_update_name>sys_app_module_1683f1b983f083107bfa9470ceaad3cb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-12 14:55:53</sys_updated_on><timeline_page/><title>My Schedules</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1472721412</payload_hash>
+        <record_name>My Schedules</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 14:55:53</sys_created_on>
+        <sys_id>a81479f983f083107bfa9470ceaad3fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e1caff2e10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 14:55:53</sys_updated_on>
+        <type>Module</type>
+        <update_guid>281479f978f08310595d511e35e99afc</update_guid>
+        <update_guid_history>281479f978f08310595d511e35e99afc:-1472721412,fdb375b966f08310a366f242a42f0612:1939497700</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Schedules">48f7b5f1833483107bfa9470ceaad3a6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 15:12:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>32726cc6051243008aaae55a22105309</sys_id>
+        <sys_metadata>1683f1b983f083107bfa9470ceaad3cb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Schedules</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_app_module_1683f1b983f083107bfa9470ceaad3cb</sys_update_name>
+        <sys_update_version display_value="sys_app_module_1683f1b983f083107bfa9470ceaad3cb">a81479f983f083107bfa9470ceaad3fd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 15:12:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

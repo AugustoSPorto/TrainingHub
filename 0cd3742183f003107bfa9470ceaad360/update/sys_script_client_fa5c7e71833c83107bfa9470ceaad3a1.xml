@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Validates if the selected date for a training schedule is already booked for the chosen course. It makes an asynchronous GlideAjax call to the TrainingHubUtils Script Include to check for duplicates, clearing the field and displaying an error message if a conflict is found.</description>
+        <field>date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Duplicate Schedule</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Prevents invalid typing formats (based on local format)
+    var selectedDateMs = getDateFromFormat(newValue, g_user_date_format);
+	if (selectedDateMs === 0) {
+        g_form.clearValue('date');
+        g_form.showFieldMsg('date', 'Error: Invalid date format. Please use the calendar icon to select a date.', 'error');
+        return; 
+    }
+    
+    // If the selected date is strictly before tomorrow (STRY 11)
+    var today = new Date();
+    var tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+    
+    if (selectedDateMs < tomorrow.getTime()) {
+        g_form.clearValue('date');
+        g_form.showFieldMsg('date', 'Error: You can only schedule training sessions for tomorrow or later.', 'error');
+        return;
+    }
+
+    // Prevents duplicate schedules for the same course (STRY 3)
+    var courseId = g_form.getValue('course');
+    
+    // Halt execution if the course field is not yet populated
+    if (!courseId) {
+		g_form.showFieldMsg('date', 'Error: Choose a course first!', 'error');
+		g_form.clearValue('date');
+        return;
+    }
+
+    // Calls the Script Include via GlideAjax to check the database for existing schedules
+    var ga = new GlideAjax('x_1960572_training.TrainingHubUtils');
+    ga.addParam('sysparm_name', 'checkDuplicateDate');
+    ga.addParam('sysparm_course', courseId);
+    ga.addParam('sysparm_date', newValue);
+    ga.addParam('sysparm_id', g_form.getUniqueValue()); 
+
+    ga.getXMLAnswer(function(answer) {
+        if (answer === 'true') {
+            // Clears the date field and display an error message if a conflict is found
+            g_form.clearValue('date'); 
+            g_form.showFieldMsg('date', 'Error: A training session for this course is already scheduled on this date!', 'error');
+        }
+    });
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 20:14:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fa5c7e71833c83107bfa9470ceaad3a1</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Validate Duplicate Schedule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_script_client_fa5c7e71833c83107bfa9470ceaad3a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 22:16:42</sys_updated_on>
+        <table>x_1960572_training_schedule</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

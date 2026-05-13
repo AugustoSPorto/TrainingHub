@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Integration" section_id="f8895965837003107bfa9470ceaad3a1" sys_domain="global" table="x_1960572_training_course" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_state</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:27:36</sys_created_on>
+            <sys_id>d4fa9529837003107bfa9470ceaad392</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:27:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:27:36</sys_created_on>
+            <sys_id>54fa9529837003107bfa9470ceaad393</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:27:36</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:27:36</sys_created_on>
+            <sys_id>d0fa9529837003107bfa9470ceaad394</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:27:36</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_error_message</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:27:36</sys_created_on>
+            <sys_id>50fa9529837003107bfa9470ceaad395</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:27:36</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Integration</caption>
+            <header>false</header>
+            <name>x_1960572_training_course</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 18:21:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f8895965837003107bfa9470ceaad3a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1960572_training_course</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+            <sys_update_name>sys_ui_section_f8895965837003107bfa9470ceaad3a1</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 18:21:22</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_ui_section_f8895965837003107bfa9470ceaad3a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Integration" section_id="f8895965837003107bfa9470ceaad3a1" sys_domain="global" table="x_1960572_training_course" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>integration_state</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 18:27:36</sys_created_on><sys_id>d4fa9529837003107bfa9470ceaad392</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 18:27:36</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 18:27:36</sys_created_on><sys_id>54fa9529837003107bfa9470ceaad393</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 18:27:36</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 18:27:36</sys_created_on><sys_id>d0fa9529837003107bfa9470ceaad394</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 18:27:36</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>integration_error_message</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 18:27:36</sys_created_on><sys_id>50fa9529837003107bfa9470ceaad395</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Integration" display_value="Integration" name="x_1960572_training_course" sys_domain="global" view="Default view">f8895965837003107bfa9470ceaad3a1</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 18:27:36</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Integration</caption><header>false</header><name>x_1960572_training_course</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 18:21:22</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f8895965837003107bfa9470ceaad3a1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1960572_training_course</sys_name><sys_overrides/><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_update_name>sys_ui_section_f8895965837003107bfa9470ceaad3a1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 18:21:22</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-2041933175</payload_hash>
+        <record_name>Training Course</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 18:27:36</sys_created_on>
+        <sys_id>10fa9529837003107bfa9470ceaad399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e184b6c830000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 18:27:36</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>50fa9529a370031083b8030e68ba2b98</update_guid>
+        <update_guid_history>50fa9529a370031083b8030e68ba2b98:-2041933175,c56a55e597700310a7d7ca0c4ea8abc8:-1786188710,1a3adda57b7003101eda5019b33a97b6:-2041933175,05895965f6700310a6b05ab991f52ceb:-538968553</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 14:32:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>91be9f6f670c4ac080e8d3c4e076b690</sys_id>
+        <sys_metadata>f8895965837003107bfa9470ceaad3a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Integration</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent display_value="Training Course">7021c5a9833403107bfa9470ceaad388</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_ui_section_f8895965837003107bfa9470ceaad3a1</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_f8895965837003107bfa9470ceaad3a1">10fa9529837003107bfa9470ceaad399</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 14:32:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

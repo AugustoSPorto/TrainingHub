@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 15:02:54</sys_created_on>
+        <sys_id>a0b47d3d83f083107bfa9470ceaad3c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1960572_training.instructor</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_security_acl display_value="">5fa47d3d83f083107bfa9470ceaad313</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a0b47d3d83f083107bfa9470ceaad3c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 15:02:54</sys_updated_on>
+        <sys_user_role display_value="x_1960572_training.instructor" name="x_1960572_training.instructor">7dedf8e1833403107bfa9470ceaad34b</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_security_acl_role_a0b47d3d83f083107bfa9470ceaad3c2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-12 15:02:54</sys_created_on><sys_id>a0b47d3d83f083107bfa9470ceaad3c2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_1960572_training.instructor</sys_name><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_security_acl display_value="">5fa47d3d83f083107bfa9470ceaad313</sys_security_acl><sys_update_name>sys_security_acl_role_a0b47d3d83f083107bfa9470ceaad3c2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-12 15:02:54</sys_updated_on><sys_user_role display_value="x_1960572_training.instructor" name="x_1960572_training.instructor">7dedf8e1833403107bfa9470ceaad34b</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1693014338</payload_hash>
+        <record_name>.x_1960572_training.instructor</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 15:02:54</sys_created_on>
+        <sys_id>2fa5b9bd83f083107bfa9470ceaad3fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e1cb660850000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 15:02:54</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2ba5b9bd73f08310f9623a5353d6cdf9</update_guid>
+        <update_guid_history>2ba5b9bd73f08310f9623a5353d6cdf9:-1693014338</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_1960572_training.instructor">dc7db1fd833483107bfa9470ceaad3ae</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 15:36:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>2226cf303d894eb8b010410e6eb269a9</sys_id>
+        <sys_metadata>a0b47d3d83f083107bfa9470ceaad3c2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1960572_training.instructor</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_a0b47d3d83f083107bfa9470ceaad3c2</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_a0b47d3d83f083107bfa9470ceaad3c2">2fa5b9bd83f083107bfa9470ceaad3fa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 15:36:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
