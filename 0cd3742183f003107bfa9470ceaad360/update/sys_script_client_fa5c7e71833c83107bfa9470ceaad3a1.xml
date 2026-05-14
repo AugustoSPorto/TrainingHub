@@ -6,11 +6,22 @@
         <description>Validates if the selected date for a training schedule is already booked for the chosen course. It makes an asynchronous GlideAjax call to the TrainingHubUtils Script Include to check for duplicates, clearing the field and displaying an error message if a conflict is found.</description>
         <field>date</field>
         <global>true</global>
-        <isolate_script>true</isolate_script>
+        <isolate_script>false</isolate_script>
         <messages/>
         <name>Validate Duplicate Schedule</name>
         <order/>
-        <script><![CDATA[function onSubmit() {
+        <script><![CDATA[var _canSubmit = false;
+
+function onSubmit() {
+    // 1. Limpar mensagens anteriores para garantir que não bloqueiem o g_form.submit()
+    g_form.hideFieldMsg('date');
+    g_form.hideFieldMsg('course');
+
+    if (_canSubmit) {
+        _canSubmit = false;
+        return true;
+    }
+
     var dateValue = g_form.getValue('date');
     var courseId = g_form.getValue('course');
 
@@ -34,18 +45,30 @@
         return false;
     }
 
+    // 2. Capturar qual botão foi clicado (Save, Update, Submit, etc.)
+    var actionName = g_form.getActionName();
+
     // STRY 3 — Check duplicate date via GlideAjax
     var ga = new GlideAjax('x_1960572_training.TrainingHubUtils');
     ga.addParam('sysparm_name', 'checkDuplicateDate');
     ga.addParam('sysparm_course', courseId);
     ga.addParam('sysparm_date', dateValue);
     ga.addParam('sysparm_id', g_form.getUniqueValue());
+    
     ga.getXMLAnswer(function(answer) {
         if (answer === 'true') {
             g_form.showFieldMsg('date', 'Error: A training session for this course is already scheduled on this date!', 'error');
             return;
         }
-        gsftSubmit(null, g_form.getFormElement(), 'sysverb_insert_and_stay');
+        
+        _canSubmit = true;
+        
+        // 3. Submeter o formulário passando a ação original
+        if (actionName) {
+            g_form.submit(actionName);
+        } else {
+            g_form.submit();
+        }
     });
 
     return false;
@@ -56,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fa5c7e71833c83107bfa9470ceaad3a1</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Validate Duplicate Schedule</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
@@ -64,7 +87,7 @@
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
         <sys_update_name>sys_script_client_fa5c7e71833c83107bfa9470ceaad3a1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-14 20:42:18</sys_updated_on>
+        <sys_updated_on>2026-05-14 22:50:02</sys_updated_on>
         <table>x_1960572_training_schedule</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>
