@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=943000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27800</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Daily job that identifies training sessions scheduled for today and emails the attendee list to the assigned instructor.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>send_daily_enrollment_list_to_instructors</internal_name>
+        <label_cache>[{"name":"37773948-d249-4496-a346-38ca18a85d9b.Records","label":"1 - Look Up Records➛Training Schedule Records","reference":"x_1960572_training_schedule","reference_display":"Training Schedule","type":"records","base_type":"records","usedInstances":{"05762087-da23-487f-8fde-ffb1a7a0518b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item","label":"2 - For Each➛Training Schedule Record","reference":"x_1960572_training_schedule","reference_display":"Training Schedule","type":"reference","base_type":"reference","usedInstances":{"868ab046-874b-40dd-8bc9-b11b02f4604a":["conditions"],"4aed6371-5d91-45c9-b0d1-96336336a167":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.instructor.email","label":"2 - For Each➛Training Schedule Record➛Instructor➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":["ah_to"]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.course.name","label":"2 - For Each➛Training Schedule Record➛Course➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_1960572_training_course","column_name":"name","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":["ah_subject",null]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.date","label":"2 - For Each➛Training Schedule Record➛Schedule Date","reference":"","reference_display":"Schedule Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_1960572_training_schedule","column_name":"date","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":[null]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.number","label":"2 - For Each➛Training Schedule Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1960572_training_schedule","column_name":"number","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":["ah_subject"]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.instructor.name","label":"2 - For Each➛Training Schedule Record➛Instructor➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":[null]}},{"name":"868ab046-874b-40dd-8bc9-b11b02f4604a.Records","label":"3 - Look Up Records➛Training Enrollment Records","reference":"x_1960572_training_enrollment","reference_display":"Training Enrollment","type":"records","base_type":"records","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":[null]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>52f45c9683b447107bfa9470ceaad347</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Send Daily Enrollment List to Instructors</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>fef45c9683b447107bfa9470ceaad38c</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:01:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0c619cda837447107bfa9470ceaad336</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Send Daily Enrollment List to Instructors</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_hub_flow_0c619cda837447107bfa9470ceaad336</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:23</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0c619cda837447107bfa9470ceaad336"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0c619cda837447107bfa9470ceaad336"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period/>
+        <run_start>2026-05-13 21:17:23</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fef45c9683b447107bfa9470ceaad38c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:23</sys_updated_on>
+        <time>1970-01-01 11:00:00</time>
+        <timer_type>11</timer_type>
+        <trigger_definition/>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:fef45c9683b447107bfa9470ceaad38c^sys_idNOT IN7ef45c9683b447107bfa9470ceaad38d"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:fef45c9683b447107bfa9470ceaad38c</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2026-05-13 21:17:23</run_start>
+        <run_time>1970-01-01 11:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('fef45c9683b447107bfa9470ceaad38c');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:23</sys_created_on>
+        <sys_id>7ef45c9683b447107bfa9470ceaad38d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:23</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">fef45c9683b447107bfa9470ceaad38c</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0c619cda837447107bfa9470ceaad336"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0c619cda837447107bfa9470ceaad336"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0c619cda837447107bfa9470ceaad336^sys_idNOT IN80619cda837447107bfa9470ceaad338"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0c619cda837447107bfa9470ceaad336</id>
+        <name>Send Daily Enrollment List to Instructors</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:01:38</sys_created_on>
+        <sys_id>80619cda837447107bfa9470ceaad338</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:01:38</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=80619cda837447107bfa9470ceaad338"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0c619cda837447107bfa9470ceaad336"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0c619cda837447107bfa9470ceaad336"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0c619cda837447107bfa9470ceaad336"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=0c619cda837447107bfa9470ceaad336^sys_idNOT INd2f41c9683b447107bfa9470ceaad3e2"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">0c619cda837447107bfa9470ceaad336</flow>
+        <generation_source/>
+        <name>Daily</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>d2f41c9683b447107bfa9470ceaad3e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21Sy27bMBD8lYJnV6DstE11K1AY6KEJ0Bi5BIGwIlc2geUjFOVEDfLvXUqMkTgVeOHs7uzMiHfPgqBDEo3YGYtiJYxLGB3QbgrI6J6MxjYtNQtOQ/JxEk2KI65EH73doQ0EiZt7oIFBHzVG0dRSrsQRaMSbafilmYsZHNjMWvjmKl/r79/kZ1nz+SQvGyn5cFUdDOmITjR39ysRIPJsyszPZ6XEUttzG3nhBvQFaiXVZs2flOvLi7r7uunqtd4A4hfuOxt7ry/9J4O37vApodOoT9Y/BBQR9LWj6dRx4HyXKCw8DeYvFqqIPbIhhUvxdG21GTjeaYHVwRuF1yEZ7xYkQUdlRnkarbtaHPBdYw8jpdsSMiPjwHwYsuasokjqbw7+8c/rwq1xs8FSJK+ATjdIKZpuTDjkv4CElolaCyEYt29D9EczD7MWW82xVT35R146mL2rQGXhFUcE1ZbxnzN8C9FkF7+ZhodfZvftw5j3Lj6K4nYxzQ0llK1BKg9rUNGE9IMXHF9f4sv9P49lkaneAgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0c619cda837447107bfa9470ceaad336^sys_idNOT IN56f41c9683b447107bfa9470ceaad3e4,5ef41c9683b447107bfa9470ceaad3eb,92f41c9683b447107bfa9470ceaad3e8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">0c619cda837447107bfa9470ceaad336</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>56f41c9683b447107bfa9470ceaad3e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <ui_id>37773948-d249-4496-a346-38ca18a85d9b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VXW0/bMBT+K1WeNqmqkt6APm2CIfFAO9EKaULMchKn9ebame30QsV/33HspKUtUErH4NHH5/Kd4+9znJuFR2Ov4x0nTd/HQev4yPcbDd9vtxsRDsKw0Y5CP2yGXtXjeEzAU+OQEVhOMMvMeoaCk7bfOqojLTHllA+RikYkznKvmKqU4fm1cx44l0p/6RKNKIsl4V7n5rbqpVhCHU2k11msbel5ShDDIWEmk4FR6RpM1Z1beBC82ZIpUCwRt6mFjA0Wv+qRmSY8JlAqwUyRqjfGPMZayHlpkQTHPc6WhhHlGjJ6xnmm6B2kP/aNX0KgrYjYvXKJ3LisORoJGpFeqqng1mKB2k3BsjHv2gbMoEmCM6aLQYMlU5CPpAazAeEQJf2RmF4VBc8pz9tzm0xEmJUrrLWkYaaJMmdBGBlDIjTGaWoOOZViQvNgwDKuDRksagkTUyiq6JDXcGSA12BEuHYO9rPcfI0lNV1cQhoIBkCUwWkjO3QlMplPZYIilql8Q2KubC7vPp8V+pMZlLZr1x+yIwIHFUma6q8QMCGulfvqTixv+UtKRILH1NRUK1SHVkivOxAxnn/5hSfYluoMVS0kQ8oNsXtJvv3p85oDoCy3flKutMwioM5Fv9sbfLv8PvixqZV/XG0/2Z2uzmXXmW4N3jZoJ8AHNifA4GACBLj/SYJwDO9Pgc9pyjb8jLCioydJ0FqetxJSIzu5FWVtsn9vhp5TwuIHH4YdwBXBPUO2Sjh/DK8jaGJqrH0h6h/+C/FKeiYxsnOhnFGef0ghIZR5x7z1n768TtZ4kB//krW5Da7dTfbiihaVu/1v2fxcC/7uALII7AOiysCi3AK8uF+L9I66jYNRt1F/GXWBODeLEn05tS0DLt5h5ugK/zvjj9f9gUQrAcH9bUn90/1qBi+tWTc117TZeJE4V5lld84eIdiBX3lvLOKqKTiCUFcPWbGiKY2HRC+rF16x0FPMfm/bd+wqNZS39+oXY/NJ7bWDpc5AA0gSBUe1+mQM4LGxeT0ENWve73a44JoM8+HtCrGIvMSzylWJcStwd0XQsobjdPOA76+3+LwVg9+qnmL+H+IXaV8K3/4F7b5uodwPAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=56f41c9683b447107bfa9470ceaad3e4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">0c619cda837447107bfa9470ceaad336</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>05762087-da23-487f-8fde-ffb1a7a0518b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>5ef41c9683b447107bfa9470ceaad3eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <ui_id>4aed6371-5d91-45c9-b0d1-96336336a167</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1bzZLbNhJ+FUTHraFCkRQljU+JJ45dlcSpWJs9xCkVCIAjZECCIcCZUaamKvc97nGrtvwsfpQ8yTb4I1KWRqKkyUR2eLIFoBvd6P76A4HBT3c9TnvnPY+ObT8IPTyyXce17bEzmQTuJLTHo4k9ILR31otxxGBkyohMze9rLDLTcHdnD0e+AyMtih3X8saj0BqHlFlhGAzwCNvDwTjoc82i+3uQo1wlAi9+LMWhhcy5oCmLe+c//XzWS3AKM2mW9s7vPujSi4TNBA6YAMELSbKIxRq9ugAdbb2opKc4vWQa/VB586F3Zir4TctJZtw0Qpcxyz7rsVvNYspg0hALxc56EY4p1jJdLFtShunrWNQNcx5rUPmFUpJwrJlCes4QizAX6IbrOcKomL7fM/puFf8NTHAdoypksAjEWMRjwilY1Gs0z8o1he5XdTeZS07Y60RzGRcLrXEgqjWXIovi7wqvTVRYiDOhG1HJFOhliXHT2K3TDHwI38zlzQ/VvC94nC9I6aCQBIvlL6x1yoMM/MwDKRhOa32z3CSjE2ZiguVrHOEk4fHlLEnlNc8Vg5lR/1LAj34o5A3IK34Z9zExPvVhwXH/BbRf5M0/4pQbB78FNSB8ny/Q7NfM2FS4uDq5GTvL4w5DFUl5or8AxdesdOH+rATHYLItrahXp09DZw2Q29lg4gNGnJlOMY+Nh4rMGc0EW4fDtByC3tRDDsPH1NiCvitsaevHivADfpXQWGkrkTE4ChlTgIMucFkAAenSjCUaxvYqGh5AwaNnf2nowen/56Q4xFXNiswtfcsn35n6uxLe9v0g8IPhyK0TZUJCOgpCH4+IWyfGDdSxNMLp1SyvY42sH6zndgn3A9MZhD9/kbt31trKShiqosgoQ/+qzN3mQZnfgZRQs+I6uZ2jkrvIRKQlgtiJBRT75cymsaYCPccacYUUhKuPphLx0viGxBlayAxFmdIwTEPPCmxW+MN7EsSUoS1bLzbG/aOA1LHQGW6vsbhOPDyfaXnYPqrPYwWLSiDx+nnS3N+jdbgdr/AwpL6BKMWXFUpbLMgS4nJ9dUowqkpniUV3OxaLzcoaFBs0YndEskIklAke8Ty4BV6PBQLdGndmr4SakAYQHvEbYTUVW5hUCT5/vm7fA6noHUYLXS4+XS4Otn4XMn8l1sHTJGMLmyrBLz/IxmBbOg67dDz1dBxuDz1ZCbbKgl8Y0Y2UnEqKF28z23ZGCtXfi0wps8Hch/XjLApYClz/x+//2UuQyCxVrG+s3Lj1OEUTH2UzsztyS8Fl3DbF8gHw+t225pQ283hruENntSpLumig1GS/SxJkLLQ0jxcRYamUOoBluMo76dve22IYe8mEkKgQUQmOERFYqWqUUTGDhDV2J1yItz2k9EKwZX8R13P4UhQ8Zs+gn8gY0kgzyvOoViNz96A7N8qoyq2teu/uQmrOqGIVyjQ6pxMWUM9n1tAOmOV5ZGQFgUcsMiIeDmnI3Il9f1+5sN14mAohTAhLtKqnmIVZnMdRgU1gqMmX20rQfmI3ykgxpTmtVF1A0/eg/xVt42ZuilXanP8LhY+lu0SNlGozCIy71UtDpRSaJ1ZtbP7JlDdOZfLhsNKqaqyDLPRCpugrTOZ53jn+pX6G1k4fywPyxpBXyy/FRqOpFK08UBqnuhrZNKKQ+tyItVCD01TetA9JXpMtAgjS+wqtzPTH//77gJ2Nhn6/f2IW7be2UCAr7XlYD1UPtV0D2df5uQ77WYgJpkAkLSBqqkHT1ge1oVg2Kow5bOMMxiNDDcUSVipeAxmg5VBU6UEJJ1csRdCImikKa/0QPqCrxgX8aIOHolhbBf9YHAC6QWJznY9lXuXLFPj9361jVMRkvzg2Gs7KlqTsj0uSq4c7fhyo5NlL2ACYM0yMVBZFOF0gGZojyxRVVyBIlZvB6iqE5uutzcax33aaneNgFXUq48ui5R/oeb4pPK8ca/Q1tJ4aDztOQB1naFvEG48tj4yZhb2hbw3c8dgZD6lt+/5HwMNt3eh4uBUPF6nccXDHwY/DwW3geeocXGDi0+XfvfkO6uZGtjs5inNHA+KMPGvih67l+QPXwowxi9keYUM6okM3+BgorqUbHcW1orhlj0njjto+OWpbje9TcFwLfJ46x+0Fik+R49p8+02lxsKU9JCnEXxaAqNpTjhMotV5WyUnxpEjf+TSQYgtf+hTyxuMh9aYMs8KB+7Qc6ntumTwEXBkWzf+VhzpAvy/kfIK/TMpka42UeVXcSqFyP/ouRy1PytumOrTIceDqWjbEj8BMbUBxV9DTBvSpclP+2fk35WSvhcMK4ZSds3ZTf7nnoIrjQIGq8zy39WJaMAueawQjimMNptmmenqT0SXx6eYRvAf+KYzV8OI56eraI6vGcgt0K+ZqZtQyPvoaykpEhm5Kt4Y5Iew1Uz5aetn+/Bhm3Ffwtxg+SWGbGh9Ylxl1MssQFOGo1W59b8wWNHz2Nenj0OhJ8NQ+1JE9+F04mzV3ct193Lt7+Xev/szr+Pev9tZ4tvfwr1/11Xxrop3Vby72eludrbX0Ce42enqZ1c/T7l+dtcH3fXBfoV0x151661Bu31uV3aPLbvd+XR3Pr1H5evOp4+read7LL3D8B3d7Q+h37/befZ82NOxl9Nvv6kejrV4SbR87Vm8I1p7WFQ+GZvrSNQPxkZHvvb0h0PX756MNZ97JjfUoalMktK3o558/vx//eWh5mFLAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5ef41c9683b447107bfa9470ceaad3eb"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">0c619cda837447107bfa9470ceaad336</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>05762087-da23-487f-8fde-ffb1a7a0518b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>92f41c9683b447107bfa9470ceaad3e8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <ui_id>868ab046-874b-40dd-8bc9-b11b02f4604a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VXTU/jMBD9K1XObZU0/aK3FSzSHgAJEBcWWU7stNa6TtZ22kLV/77j2ElDW6CUioWjxzOeN+P3Js790mPEG3nDpOv7OOgNB74fhr7f74cxDqIo7MeRH3Ujr+kJPKXgqXHEKSxnmOdmvUDBSd/vDTpIS8wEE2NEhUw5n1KhwY8wlXH8eOfcb51T42fdKZ4wTiQV3uj+oellWEIuTaU3Wm5s6ceMIo4jys1ZBkrj0uBq7l3Gs+DtskyCcomEPTqVxGDxmx5daCoIhVQJ5oo2vSkWBOtUPlYWSTG5EnxtmDAoceR5xnmh2BMcP/SNX0KhrJjavWqJXMOsOZ6kLKZXmWapsBYL1G6mPJ+KS1uAaTVNcM512Wqw5ArOo5nBbEA4RMnNJJ1flwnPmSjKc5s8jTGvVlhryaJcU2XugnJqLgxNcZaZi85kOmNFMGCZtsccFu2Ep3NIqthYtHFsgLehRbh9DvazwnyHJTNVXMAxEAyAGIfbRrbpKs1l0ZUZinmuig2JhbJneauiV+hvblDaql19yLYIHFQsWaZ/QMCMulJWzb2Y3vPXlIhTQZjJqWp0V/GEkpzT3zmEk+USmN/v+MNBi+BO2OoOB0lrmBDaSpIowAPs94Jh1GaaTlerbTF87LDDRHNar2rfjuwM3tUmJ59nNief4GjyAbj/SUBa5l9PP28pwhb8hiziwask6K3vW6VSI9u5mi62yX0wQ88Z5eTZWN8DXBl8ZcjWiB5fwusImpgcG/O98+3n+wfpmRBk+8IEZ6L4DMKBkOYL89Z/fXidbPCguP7aNDc2rOJt9uKGThtPh0/Z4l5L/u4Bsgy8AUSNW4tyB/ByvpbHO+qGR6Nu2HkfdYE498sKfdW1HQ0uX1Hm6kr/J+OPN/2BRLWAYPVQUf/0sJzBe3N2TM4NbYbvEmedWXbn7AWCHfmN9skibpqEEwh1+ZAVK5ozMqZ6nb30IqmeY/5n175jV6WhorwPv/e6r2qvH6x1BhpAkiq4qvqDL4DHxvZ4CNrWfNh0+CU0HRfN2xdiGXmBF43rCuNO4G5EsCqH43T3iO+vz/i8lY3fqZ6y/9/iB+dQCj/8A0qcw2KeDwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=92f41c9683b447107bfa9470ceaad3e8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0c619cda837447107bfa9470ceaad336"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0c619cda837447107bfa9470ceaad336^sys_idNOT INd6f41c9683b447107bfa9470ceaad3e6"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d2f41c9683b447107bfa9470ceaad3e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">0c619cda837447107bfa9470ceaad336</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>d6f41c9683b447107bfa9470ceaad3e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <ui_id>05762087-da23-487f-8fde-ffb1a7a0518b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW/bMAz9Lzonhr/m2LkVKAr0sBXoil6GwqAlOhEqS54kJ/UM//dRsZMNPQ07WXwkH98T5YmZwfeDdy/mzjl50Gz/423DpA4YnScmBduzpBJtlcQVz9IiS+M4LfOkKbImSUUGKAq2YRo6pErpsXMUnkANIZ6mbLfbZVVebkWaV9s8r4otZHmxzUoOSQnlF1E10TNyY4WbZ2oV0vUKxtf/Z+BHqYTF1UwPlrR5tGw/fUr5scdaQYOKBq0M1P+vnq+dj6vpT3cQ2Cm0N176BBVpvGH44VELpEEtKIcb1oEW4I0d2d7bgQCLIJ60Gm8VR6k90bFQ++HkL+JO4jgUtkiOOC7JW1ivF7nA/Ggkx6feS6MXxEOj1h5u1NDpb4v8sAJsYVD+ugJCBkd82AfNQcUqqf1+NOfn68AHqS/+1qQyHNQtAu+tbAaPLqwBFXZEVHfQ91If6t6ak7w0k5YuOigKolaZMw0NzzICHoRHdEUQPRB+f4Ffwcrg4ivRUPN8cV//HMLcxcequF5MU4HjVvb+juhOuIqb38J7XZjc8jAEculo4EvAHq9/Q0iMtGTJ/4bOxr4HqX+w+TfjBuAEVwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0c619cda837447107bfa9470ceaad336^sys_idNOT IN16f41c9683b447107bfa9470ceaad3ee,5af41c9683b447107bfa9470ceaad3ee,9ef41c9683b447107bfa9470ceaad3ee,d2f41c9683b447107bfa9470ceaad3ef,def41c9683b447107bfa9470ceaad3ed"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0c619cda837447107bfa9470ceaad336</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.course.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>16f41c9683b447107bfa9470ceaad3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>a470b703-f1f6-4bc6-bc11-4beb9653fc5e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0c619cda837447107bfa9470ceaad336</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.course.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>5af41c9683b447107bfa9470ceaad3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>22bd2250-c488-4c8e-a456-1388285d0066</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0c619cda837447107bfa9470ceaad336</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.date}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>9ef41c9683b447107bfa9470ceaad3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2371c274-96f3-4613-aeee-e04ce5d7d53b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0c619cda837447107bfa9470ceaad336</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{868ab046-874b-40dd-8bc9-b11b02f4604a.Records}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>d2f41c9683b447107bfa9470ceaad3ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7673d1fa-656d-4185-8de4-f13543d033c1</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0c619cda837447107bfa9470ceaad336</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.instructor.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>def41c9683b447107bfa9470ceaad3ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d9ebd46e-50be-44c7-bb4c-c7c4afdfe390</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0c619cda837447107bfa9470ceaad336"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0c619cda837447107bfa9470ceaad336"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0c619cda837447107bfa9470ceaad336"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27800</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Daily job that identifies training sessions scheduled for today and emails the attendee list to the assigned instructor.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>send_daily_enrollment_list_to_instructors</internal_name>
+        <label_cache>[{"name":"37773948-d249-4496-a346-38ca18a85d9b.Records","label":"1 - Look Up Records➛Training Schedule Records","reference":"x_1960572_training_schedule","reference_display":"Training Schedule","type":"records","base_type":"records","usedInstances":{"05762087-da23-487f-8fde-ffb1a7a0518b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item","label":"2 - For Each➛Training Schedule Record","reference":"x_1960572_training_schedule","reference_display":"Training Schedule","type":"reference","base_type":"reference","usedInstances":{"868ab046-874b-40dd-8bc9-b11b02f4604a":["conditions"],"4aed6371-5d91-45c9-b0d1-96336336a167":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.instructor.email","label":"2 - For Each➛Training Schedule Record➛Instructor➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":["ah_to"]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.course.name","label":"2 - For Each➛Training Schedule Record➛Course➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_1960572_training_course","column_name":"name","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":["ah_subject",null]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.date","label":"2 - For Each➛Training Schedule Record➛Schedule Date","reference":"","reference_display":"Schedule Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_1960572_training_schedule","column_name":"date","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":[null]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.number","label":"2 - For Each➛Training Schedule Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1960572_training_schedule","column_name":"number","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":["ah_subject"]}},{"name":"05762087-da23-487f-8fde-ffb1a7a0518b.item.instructor.name","label":"2 - For Each➛Training Schedule Record➛Instructor➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":[null]}},{"name":"868ab046-874b-40dd-8bc9-b11b02f4604a.Records","label":"3 - Look Up Records➛Training Enrollment Records","reference":"x_1960572_training_enrollment","reference_display":"Training Enrollment","type":"records","base_type":"records","usedInstances":{"4aed6371-5d91-45c9-b0d1-96336336a167":[null]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Send Daily Enrollment List to Instructors</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Send Daily Enrollment List to Instructors">0c619cda837447107bfa9470ceaad336</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>52f45c9683b447107bfa9470ceaad347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_variable_value action="delete_multiple" query="document_key=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=52f45c9683b447107bfa9470ceaad347^sys_idNOT IN52f45c9683b447107bfa9470ceaad348"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>52f45c9683b447107bfa9470ceaad347</id>
+        <name>Send Daily Enrollment List to Instructors</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:21</sys_created_on>
+        <sys_id>52f45c9683b447107bfa9470ceaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=52f45c9683b447107bfa9470ceaad348"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=52f45c9683b447107bfa9470ceaad347^sys_idNOT INaaf45c9683b447107bfa9470ceaad35b"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">52f45c9683b447107bfa9470ceaad347</flow>
+        <generation_source/>
+        <name>Daily</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>aaf45c9683b447107bfa9470ceaad35b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/21Sy27bMBD8lYJnV6DstE11K1AY6KEJ0Bi5BIGwIlc2geUjFOVEDfLvXUqMkTgVeOHs7uzMiHfPgqBDEo3YGYtiJYxLGB3QbgrI6J6MxjYtNQtOQ/JxEk2KI65EH73doQ0EiZt7oIFBHzVG0dRSrsQRaMSbafilmYsZHNjMWvjmKl/r79/kZ1nz+SQvGyn5cFUdDOmITjR39ysRIPJsyszPZ6XEUttzG3nhBvQFaiXVZs2flOvLi7r7uunqtd4A4hfuOxt7ry/9J4O37vApodOoT9Y/BBQR9LWj6dRx4HyXKCw8DeYvFqqIPbIhhUvxdG21GTjeaYHVwRuF1yEZ7xYkQUdlRnkarbtaHPBdYw8jpdsSMiPjwHwYsuasokjqbw7+8c/rwq1xs8FSJK+ATjdIKZpuTDjkv4CElolaCyEYt29D9EczD7MWW82xVT35R146mL2rQGXhFUcE1ZbxnzN8C9FkF7+ZhodfZvftw5j3Lj6K4nYxzQ0llK1BKg9rUNGE9IMXHF9f4sv9P49lkaneAgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=52f45c9683b447107bfa9470ceaad347^sys_idNOT IN16f45c9683b447107bfa9470ceaad356,d2f45c9683b447107bfa9470ceaad355,eef45c9683b447107bfa9470ceaad359"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">52f45c9683b447107bfa9470ceaad347</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>05762087-da23-487f-8fde-ffb1a7a0518b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>16f45c9683b447107bfa9470ceaad356</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <ui_id>868ab046-874b-40dd-8bc9-b11b02f4604a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX227iMBD9FZRnQAnhVt5W7VZaqReprfrSrSwndsBa42RtB0oR/77j2AkRpF3QUqnVPno84zkzc47jPK09RryJN076vo+DwXjk+2Ho+8NhGOMgisJhHPlRP/LansBzCp4aR5zCcoF5btYvKDgb+oNRD2mJmWBiiqiQKedzKjT4EaYyjlePzv3BObW+153iGeNEUuFNnp7bXoYl5NJUepP1ztahYDmOKDfpHNod8HqVVUtU7FnbVT2sdWM3UkkMFL/t0RdNBaGAIcFc0bY3x4JgncpVZZEUk1vBt4YZgwonnmecXxR7hbxj3/glFKqKqd2rlsj1y5qTC6zxvZZ5rHPpXONZymKqbD8ITXDO9XndZh1uM81SYUNs2TY65flc3Nh2eNUB5XjAkisAQTNTqEHuykjuZ+nyrkR5yUTRE7fJ0xjzaoW1lizKtcGz9iinZshojrPMkCOT6YIVwYBl3p1yWHQTni4hqWJT0cWxAd6FvuLuJdgvCvMjlsxUcQ3HQDAAYhwYguwIVZrLopULFPNcFRsSC2XP8jZtT63UOcdKbSuHlqPfucFt++AqRrZpJiSWLNPf4IgFdcVt2gfpZeBvKRengjCDQtVEo+IZJTmnP3MIJ+s16GfY88ejDsG9sNMfj5LOOCG0kyRRgEfYHwTjqMs0nW82+5L6t8NOKb2i7lJ65/XCm5rhRLhnu2o6wIkwOJkIoY6vJENI/vlUeLyubAv+Iq549C7JBls+qVRqZHtZU9e+RI7m+QEQSp7fGma2otVbqBzNE0Y5afrWXJqNnW9N7//81nxKkgMgguz0mOBMFA8HAPpR7Pffv2LPdnhW0Kv2ZTE2rOJ9DeCWTluvRyvhADilEu4hd+vB4mmAWN73BWV27/rS6AQQnkwAYe80AlhXZVaNbOh5+VY00yz9X40/3vUHCtYCgk2TwI7KGRybs7fZF3B4lILrZLM7F29w7sSPyjcU2f7IK2AGoS4fsvpFS0amVG+zl14k1UvMfzXtO8ahclBFeR/wQO2/K9thsJUoKAVJqmB49RdqAM+j/Tsk6FrzcVfIAVjKdlzjl9ZdBaYRobtGQOl0Wsymfo/8qKyO5P0TPhg/7Ze0HFajBsuZfYn/utMJ4fkPZU7MydsQAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=16f45c9683b447107bfa9470ceaad356"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">52f45c9683b447107bfa9470ceaad347</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>d2f45c9683b447107bfa9470ceaad355</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <ui_id>37773948-d249-4496-a346-38ca18a85d9b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXbWvbMBD+K8GfNgjBzlvbfNpoVyi0yWhCYZROyLacaFNkT5KTpiH/fSdLfiFxuwQSaNlH3Z10z909jyw/rh0aOgPnPOq6LvZ652eu2+m4br/fCbDn+51+4Lt+13eaDsdzApEK+4zAcoFZqtfPyLvou72zNlICU075FMlgRsI0iwqpTBhePdjgiQ1pjMuQYEZZKAh3Bo9PTSfBAvIoIpzBesu1L1CGfcJ0Mot0C7haJcUSZT5ju61uawyNIxahhuI2HfKsCA8JYIgwk6TpzDEPsYrFqrAIgsMRZ6VhRrmCEx0d/CzpC+Q9d3VcRKCqgBhfsUS2W8YcXWGFx0qkgUqFDQ1mMQ2INP0ISYRTpi6rNhMwShSNudliyja7Y5bO+dC0wykOyIcDllQCCJLoQjVyW0Y0nsXL+xzlNeVZT6yTxQFmxQorJaifKo1n7RBG5nAQmuMk0cRIRLyg2WbAMm9NGSxaEYuXkFTSKW/hQANvQV9x6xrsV5n5AQuqq7iDY2AzAKIMGILMCGWciqyVCxSwVGYOgbk0ZzmbpiNX8pJhKcvKoeXoT6pxmz7YipFpmt4SCJqor3DEgtjiNs29tNJzS8oFMQ+pRiErgoHiyGg4iUO8+vILL7BJNZjKlk+mlGt5jKLM/enzVgCgLFw/KZcZOWJxMx6OJt/uvk9+7CruxNmOKd6sc7l4L6utq2unlfGO7bbuACtj72gyhjo+kpAh+fvT8eHKNC34hzyDszdJ1iv5JGOhkOllRZ+7GjqY53tAyHk+0sxs+KvXUFmaR5SwsO5rda0dW1+r9v/5tXqXJAdAITLTo5xRnj09AOip2O++fcVebPEso1fJ/cwGn4BdDeCGihsvBythDzi5EsaQuzExeGog5vd9Rpntuz43WgF0jiaATvs4AlgXZRaNrOl5/trU08zjX3Q83o4HClY2eJs6gR2U0zs0Z3uzK+DOQQquks14rl7h3JGfpa8osnnKK2AGW20+ZPSLljScElVmz6PCWC0x+13nt4xD+aCy8k7wxO2+Kdu+V0oUlIIEkTC86hvXg+fR7h3itYz5sCtkDyx5O+7wc+O+AFOL0F4joHQyzWZTvUduCqslefeID8Z3+yXNh1WrwXxmH+LP8HhCePoLKoGm0BkRAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d2f45c9683b447107bfa9470ceaad355"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">52f45c9683b447107bfa9470ceaad347</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>05762087-da23-487f-8fde-ffb1a7a0518b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>eef45c9683b447107bfa9470ceaad359</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <ui_id>4aed6371-5d91-45c9-b0d1-96336336a167</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eef45c9683b447107bfa9470ceaad359"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=52f45c9683b447107bfa9470ceaad347^sys_idNOT INdaf45c9683b447107bfa9470ceaad352"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d2f41c9683b447107bfa9470ceaad3e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Send Daily Enrollment List to Instructors">52f45c9683b447107bfa9470ceaad347</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>daf45c9683b447107bfa9470ceaad352</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <ui_id>05762087-da23-487f-8fde-ffb1a7a0518b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW+cMBD9Lz6ziK+ysLcoUaRIbSNtolyqCA222bVqbGqb3VDEf+94YUmUU9QTzJuv9x7DSHTvut7ZZ31jrTgosvv1GhChPIbvIxGM7EhcsqaMo5KmSZ4mUZQUWVznaR0nLAXOchIQBS3HSuF4azE8gex9PI7pdrtNy6zYsCQrN1lW5htIs3yTFhTiAopvrKzDPafaMDtN2MqE7SQML/8/gR6FZIYvYjowyM1xQ3bjp9RXxUmoucTSh0XdJ7Fu6HxoZgoL8H3p2a8oPjyJJAoIf3NcMY7rG5CWB6QFxcBpM5CdMz0ChgN7VHJYK45CORxHfO2bFX9xYxxFvrDhKIjyObmG1eLjDDd34OAJR1PXm6WUHrWg3M5WMN5AL93tR2wueOyc0GpucVDLa7eWfat+zk6QdcD1syHSWyTBOy/UU190NE9Hfd5fWd4LdTFlSUpNQa4ROGdE3TvPZyRc8hYHVS10nVCHqjP6JC7NyKUNDxKDsJH6jEv9KYdAPfEQfYXwHvG7C/wCRngVP3AMNk8BsYO9lWDtuxY0sfrTeyazskVDNdvgW6gRnbvBBSe+0J1e/dXPs1dPqbBI4dljD9d/yicGvCBBP0JnbX578u/Y9A8rh62inQMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=52f45c9683b447107bfa9470ceaad347^sys_idNOT IN22f45c9683b447107bfa9470ceaad35c,6af45c9683b447107bfa9470ceaad35c,6ef45c9683b447107bfa9470ceaad35b,a6f45c9683b447107bfa9470ceaad35c,e2f45c9683b447107bfa9470ceaad35c"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>52f45c9683b447107bfa9470ceaad347</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.course.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>22f45c9683b447107bfa9470ceaad35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>a470b703-f1f6-4bc6-bc11-4beb9653fc5e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>52f45c9683b447107bfa9470ceaad347</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.date}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>6af45c9683b447107bfa9470ceaad35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2371c274-96f3-4613-aeee-e04ce5d7d53b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>52f45c9683b447107bfa9470ceaad347</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.instructor.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>6ef45c9683b447107bfa9470ceaad35b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d9ebd46e-50be-44c7-bb4c-c7c4afdfe390</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>52f45c9683b447107bfa9470ceaad347</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{868ab046-874b-40dd-8bc9-b11b02f4604a.Records}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>a6f45c9683b447107bfa9470ceaad35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7673d1fa-656d-4185-8de4-f13543d033c1</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>52f45c9683b447107bfa9470ceaad347</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{05762087-da23-487f-8fde-ffb1a7a0518b.item.course.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:22</sys_created_on>
+        <sys_id>e2f45c9683b447107bfa9470ceaad35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>22bd2250-c488-4c8e-a456-1388285d0066</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=52f45c9683b447107bfa9470ceaad347"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_52f45c9683b447107bfa9470ceaad347"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_52f45c9683b447107bfa9470ceaad347"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0c619cda837447107bfa9470ceaad336</sys_id>
+        <latest_snapshot>52f45c9683b447107bfa9470ceaad347</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0c619cda837447107bfa9470ceaad336^sys_idNOT IN3af45c9683b447107bfa9470ceaad392"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>0c619cda837447107bfa9470ceaad336</plan_id>
+        <snapshot>52f45c9683b447107bfa9470ceaad347</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 21:17:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3af45c9683b447107bfa9470ceaad392</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 21:17:23</sys_updated_on>
+        <trigger display_value="">fef45c9683b447107bfa9470ceaad38c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0c619cda837447107bfa9470ceaad336"/>
+</record_update>

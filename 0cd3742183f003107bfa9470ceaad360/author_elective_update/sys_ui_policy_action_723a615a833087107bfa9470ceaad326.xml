@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>requester_user</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-14 03:30:05</sys_created_on>
+        <sys_id>723a615a833087107bfa9470ceaad326</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>requester_user</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_ui_policy_action_723a615a833087107bfa9470ceaad326</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 03:52:59</sys_updated_on>
+        <table>x_1960572_training_enrollment</table>
+        <ui_policy display_value="Mandatory Enrollment Fields.">1d40b361833443107bfa9470ceaad39e</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=723a615a833087107bfa9470ceaad326"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_ui_policy_action_723a615a833087107bfa9470ceaad326</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>requester_user</field><field_message/><field_message_type>none</field_message_type><mandatory>true</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-14 03:30:05</sys_created_on><sys_id>723a615a833087107bfa9470ceaad326</sys_id><sys_mod_count>1</sys_mod_count><sys_name>requester_user</sys_name><sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package><sys_policy/><sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope><sys_update_name>sys_ui_policy_action_723a615a833087107bfa9470ceaad326</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-14 03:52:59</sys_updated_on><table>x_1960572_training_enrollment</table><ui_policy display_value="Mandatory Enrollment Fields.">1d40b361833443107bfa9470ceaad39e</ui_policy><value/><value_action>ignore</value_action><visible>true</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=723a615a833087107bfa9470ceaad326"/></record_update>]]></payload>
+        <payload_hash>1966330755</payload_hash>
+        <record_name>requester_user</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-14 03:52:59</sys_created_on>
+        <sys_id>798f6156837087107bfa9470ceaad3ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e249dc42b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 03:52:59</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>718fed161c70871044ddf1ba1a63e06f</update_guid>
+        <update_guid_history>718fed161c70871044ddf1ba1a63e06f:1966330755,564ae15ace308710357829bf9e73e060:702945919</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-14 04:01:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>35037838f2a24448adc6c0c7eeae1040</sys_id>
+        <sys_metadata>723a615a833087107bfa9470ceaad326</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>requester_user</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent display_value="Mandatory Enrollment Fields.">1d40b361833443107bfa9470ceaad39e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_723a615a833087107bfa9470ceaad326</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_723a615a833087107bfa9470ceaad326">798f6156837087107bfa9470ceaad3ea</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 04:01:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
