@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Prevents duplicate enrollments and enforces the 3-enrollment course limit on the admin form.</description>
+        <field>user</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Validate Duplicate Enrollment</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    var userId = g_form.getValue('user');
+    var scheduleId = g_form.getValue('schedule');
+
+    if (!userId || !scheduleId) {
+        return true;
+    }
+
+    // Check duplicate enrollment (STRY 7)
+    var gaDuplicate = new GlideAjax('x_1960572_training.TrainingHubUtils');
+    gaDuplicate.addParam('sysparm_name', 'checkDuplicateEnrollment');
+    gaDuplicate.addParam('sysparm_user', userId);
+    gaDuplicate.addParam('sysparm_schedule', scheduleId);
+    gaDuplicate.getXMLAnswer(function(answerDuplicate) {
+        if (answerDuplicate === 'true') {
+			g_form.clearValue('schedule');
+            g_form.showFieldMsg('schedule', 'Error: This user is already enrolled in this schedule!', 'error');
+            return;
+        }
+
+
+    });
+
+    return false;
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-14 19:54:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>822809a683f8c7107bfa9470ceaad3d9</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Validate Duplicate Enrollment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_update_name>sys_script_client_822809a683f8c7107bfa9470ceaad3d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 20:20:44</sys_updated_on>
+        <table>x_1960572_training_enrollment</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</application>
+        <file_path/>
+        <instance_id>ce0ab4e8eb0c9adccbdefceacad0cd47</instance_id>
+        <instance_name>dev287264</instance_name>
+        <name>sys_script_client_822809a683f8c7107bfa9470ceaad3d9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Prevents duplicate enrollments and enforces the 3-enrollment course limit on the admin form.&lt;/description&gt;&lt;field&gt;user&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Validate Duplicate Enrollment&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+    var userId = g_form.getValue('user');
+    var scheduleId = g_form.getValue('schedule');
+
+    if (!userId || !scheduleId) {
+        return true;
+    }
+
+    // Check duplicate enrollment (STRY 7)
+    var gaDuplicate = new GlideAjax('x_1960572_training.TrainingHubUtils');
+    gaDuplicate.addParam('sysparm_name', 'checkDuplicateEnrollment');
+    gaDuplicate.addParam('sysparm_user', userId);
+    gaDuplicate.addParam('sysparm_schedule', scheduleId);
+    gaDuplicate.getXMLAnswer(function(answerDuplicate) {
+        if (answerDuplicate === 'true') {
+			g_form.clearValue('schedule');
+            g_form.showFieldMsg('schedule', 'Error: This user is already enrolled in this schedule!', 'error');
+            return;
+        }
+
+
+    });
+
+    return false;
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-14 19:54:40&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;822809a683f8c7107bfa9470ceaad3d9&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Duplicate Enrollment&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Training Hub" source="x_1960572_training"&gt;0cd3742183f003107bfa9470ceaad360&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Training Hub"&gt;0cd3742183f003107bfa9470ceaad360&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_822809a683f8c7107bfa9470ceaad3d9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-14 20:20:44&lt;/sys_updated_on&gt;&lt;table&gt;x_1960572_training_enrollment&lt;/table&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-382260642</payload_hash>
+        <record_name>Validate Duplicate Enrollment</record_name>
+        <reverted_from/>
+        <source>33d51d2d833003107bfa9470ceaad313</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-14 20:20:44</sys_created_on>
+        <sys_id>ee919daa833cc7107bfa9470ceaad3e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e282612450000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 20:20:44</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>6e919daa4b3cc71059bb7045f25940e4</update_guid>
+        <update_guid_history>6e919daa4b3cc71059bb7045f25940e4:-382260642,3b70552a213cc71046f694398c8a2c43:1346092966,1b10552a963cc71032330bf0b400d455:-1136588281,1fff052a423cc71079ec382f10ec991b:-1885133631,4edfc5e6f63cc710ec6bfa75fbcc5832:-965717335,487fc5a63e3cc7101730723a4b671a68:1837003967,661fc1667c3cc710cd253fb8a7dfc082:1854765688,bafe81a6723cc710df34d83e113de8f7:504902984,317e8166bd3cc710956dd4147eb1a7bd:1854765688,cb5ec926c43cc710372e1adc60faeaa2:504902984,3c3e4126ce3cc710714f0faccce241b6:1854765688,16dd0de2da3cc7108a274bf3cddc9a57:433216332,f54d49a2523cc7103d4ed9e96f13698e:-1251914028,eedc89628c3cc7108b49fa3573040b7f:-1382225017,f4ab05ee75f8c710a815e442bf7ac0a8:-1397766042</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-14 20:21:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>00e942a4803b486e8036c2741b7407e1</sys_id>
+        <sys_metadata>822809a683f8c7107bfa9470ceaad3d9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Duplicate Enrollment</sys_name>
+        <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
+        <sys_parent display_value="Training Enrollment">0a8145e9833403107bfa9470ceaad353</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
+        <sys_scope_delete display_value="">0e2cc2b0d33846b2a5151d09a6fb3e04</sys_scope_delete>
+        <sys_update_name>sys_script_client_822809a683f8c7107bfa9470ceaad3d9</sys_update_name>
+        <sys_update_version display_value="sys_script_client_822809a683f8c7107bfa9470ceaad3d9">ee919daa833cc7107bfa9470ceaad3e5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 20:21:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

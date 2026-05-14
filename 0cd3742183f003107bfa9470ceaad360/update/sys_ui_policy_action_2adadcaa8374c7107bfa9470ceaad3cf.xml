@@ -2,27 +2,27 @@
     <sys_ui_policy_action action="INSERT_OR_UPDATE">
         <cleared>false</cleared>
         <disabled>true</disabled>
-        <field>opened_by</field>
+        <field>user</field>
         <field_message/>
         <field_message_type>none</field_message_type>
         <mandatory>ignore</mandatory>
         <sys_class_name>sys_ui_policy_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-05-13 01:37:00</sys_created_on>
-        <sys_id>abb6888a8374c3107bfa9470ceaad391</sys_id>
+        <sys_created_on>2026-05-14 16:21:53</sys_created_on>
+        <sys_id>2adadcaa8374c7107bfa9470ceaad3cf</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>opened_by</sys_name>
+        <sys_name>user</sys_name>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
-        <sys_update_name>sys_ui_policy_action_abb6888a8374c3107bfa9470ceaad391</sys_update_name>
+        <sys_update_name>sys_ui_policy_action_2adadcaa8374c7107bfa9470ceaad3cf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-13 01:37:00</sys_updated_on>
+        <sys_updated_on>2026-05-14 16:21:53</sys_updated_on>
         <table>x_1960572_training_enrollment</table>
         <ui_policy display_value="Enrollment fields Read-Only when Approved/Reprove">3676884a8374c3107bfa9470ceaad338</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>ignore</visible>
     </sys_ui_policy_action>
-    <sys_translated_text action="delete_multiple" query="documentkey=abb6888a8374c3107bfa9470ceaad391"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=2adadcaa8374c7107bfa9470ceaad3cf"/>
 </record_update>
