@@ -53,113 +53,152 @@ TrainingHubUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
     },
 
 
-	// Reference Qualifier for Schedules (STRY 7, 8, 9, 10, 11)
-	refQualSchedule: function() {
-		var courseId = this.getParameter('sysparm_course') || arguments[0];
-		if (!courseId) {
-			return "sys_id=NULL";
-		}
+    // Reference Qualifier for Schedules (STRY 7, 8, 9, 10, 11)
+    refQualSchedule: function() {
+        var courseId = this.getParameter('sysparm_course') || arguments[0];
+        if (!courseId) {
+            return "sys_id=NULL";
+        }
 
-		// STRY 8 — Block if user already has 3+ enrollments in this course
-		var grLimit = new GlideRecord("x_1960572_training_enrollment");
-		grLimit.addQuery("user", gs.getUserID());
-		grLimit.addQuery("schedule.course", courseId);
-		grLimit.query();
+        // STRY 8 — Block if user already has 3+ enrollments in this course
+        var grLimit = new GlideRecord("x_1960572_training_enrollment");
+        grLimit.addQuery("user", gs.getUserID());
+        grLimit.addQuery("schedule.course", courseId);
+        grLimit.query();
 
-		if (grLimit.getRowCount() >= 3) {
-			return "sys_id=NULL";
-		}
+        if (grLimit.getRowCount() >= 3) {
+            return "sys_id=NULL";
+        }
 
-		// STRY 7 — Collect schedules where the user already has an active enrollment
-		var enrolledSchedules = [];
-		var grEnrollment = new GlideRecord("x_1960572_training_enrollment");
-		grEnrollment.addQuery("user", gs.getUserID());
-		grEnrollment.addQuery("state", "!=", "4");
-		grEnrollment.query();
+        // STRY 7 — Collect schedules where the user already has an active enrollment
+        var enrolledSchedules = [];
+        var grEnrollment = new GlideRecord("x_1960572_training_enrollment");
+        grEnrollment.addQuery("user", gs.getUserID());
+        grEnrollment.addQuery("state", "!=", "4");
+        grEnrollment.query();
 
-		while (grEnrollment.next()) {
-			enrolledSchedules.push(grEnrollment.getValue("schedule"));
-		}
+        while (grEnrollment.next()) {
+            enrolledSchedules.push(grEnrollment.getValue("schedule"));
+        }
 
-		var schedulesToShow = [];
+        var schedulesToShow = [];
 
-		var grSchedule = new GlideRecord("x_1960572_training_schedule");
-		grSchedule.addQuery("course", courseId);
+        var grSchedule = new GlideRecord("x_1960572_training_schedule");
+        grSchedule.addQuery("course", courseId);
 
-		// STRY 11 — Filters out schedules within 1 day
-		var tomorrow = new GlideDateTime();
-		tomorrow.addDaysLocalTime(1);
-		grSchedule.addQuery("date", ">", tomorrow.getValue());
+        // STRY 11 — Filters out schedules within 1 day
+        var tomorrow = new GlideDateTime();
+        tomorrow.addDaysLocalTime(1);
+        grSchedule.addQuery("date", ">", tomorrow.getValue());
 
-		// STRY 10 — Skip schedules where user is the instructor
-		var qc = grSchedule.addQuery("instructor", "!=", gs.getUserID());
-		qc.addOrCondition("instructor", "NULL");
+        // STRY 10 — Skip schedules where user is the instructor
+        var qc = grSchedule.addQuery("instructor", "!=", gs.getUserID());
+        qc.addOrCondition("instructor", "NULL");
 
-		// STRY 7 — Skip schedules the user is already enrolled in
-		if (enrolledSchedules.length > 0) {
-			grSchedule.addQuery("sys_id", "NOT IN", enrolledSchedules.join(","));
-		}
+        // STRY 7 — Skip schedules the user is already enrolled in
+        if (enrolledSchedules.length > 0) {
+            grSchedule.addQuery("sys_id", "NOT IN", enrolledSchedules.join(","));
+        }
 
-		grSchedule.query();
+        grSchedule.query();
 
-		while (grSchedule.next()) {
-			var occupied = parseInt(grSchedule.getValue("occupied_seats") || 0);
-			var max = parseInt(grSchedule.getValue("max_seats") || 0);
+        while (grSchedule.next()) {
+            var occupied = parseInt(grSchedule.getValue("occupied_seats") || 0);
+            var max = parseInt(grSchedule.getValue("max_seats") || 0);
 
-			// STRY 9 — Only include schedules with open slots
-			if (occupied < max) {
-				schedulesToShow.push(grSchedule.getUniqueValue());
-			}
-		}
+            // STRY 9 — Only include schedules with open slots
+            if (occupied < max) {
+                schedulesToShow.push(grSchedule.getUniqueValue());
+            }
+        }
 
-		if (schedulesToShow.length == 0) {
-			return "sys_id=NULL";
-		}
+        if (schedulesToShow.length == 0) {
+            return "sys_id=NULL";
+        }
 
-		return "sys_idIN" + schedulesToShow.join(",");
-	},
+        return "sys_idIN" + schedulesToShow.join(",");
+    },
 
-	// Checks if a user is already enrolled in a given schedule (STRY 7)
-	checkDuplicateEnrollment: function() {
-		var userId = this.getParameter("sysparm_user");
-		var scheduleId = this.getParameter("sysparm_schedule");
+    // Checks if a user is already enrolled in a given schedule (STRY 7)
+    checkDuplicateEnrollment: function() {
+        var userId = this.getParameter("sysparm_user");
+        var scheduleId = this.getParameter("sysparm_schedule");
 
-		if (!userId || !scheduleId) {
-			return "false";
-		}
+        if (!userId || !scheduleId) {
+            return "false";
+        }
 
-		var gr = new GlideRecord("x_1960572_training_enrollment");
-		gr.addQuery("user", userId);
-		gr.addQuery("schedule", scheduleId);
-		gr.addQuery("state", "!=", "4"); // reproved can re-enroll
-		gr.setLimit(1);
-		gr.query();
+        var gr = new GlideRecord("x_1960572_training_enrollment");
+        gr.addQuery("user", userId);
+        gr.addQuery("schedule", scheduleId);
+        gr.addQuery("state", "!=", "4"); // reproved can re-enroll
+        gr.setLimit(1);
+        gr.query();
 
-		return gr.next() ? "true" : "false";
-	},
+        return gr.next() ? "true" : "false";
+    },
 
-	// Checks if a user has reached the 3-enrollment limit for a course (STRY 8)
-	checkEnrollmentLimit: function() {
-		var userId = this.getParameter("sysparm_user");
-		var scheduleId = this.getParameter("sysparm_schedule");
+    // Checks if a user has reached the 3-enrollment limit for a course (STRY 8)
+    checkEnrollmentLimit: function() {
+        var userId = this.getParameter("sysparm_user");
+        var scheduleId = this.getParameter("sysparm_schedule");
 
-		if (!userId || !scheduleId) {
-			return "false";
-		}
+        if (!userId || !scheduleId) {
+            return "false";
+        }
 
-		var grSchedule = new GlideRecord("x_1960572_training_schedule");
-		if (!grSchedule.get(scheduleId)) {
-			return "false";
-		}
-		var courseId = grSchedule.getValue("course");
+        var grSchedule = new GlideRecord("x_1960572_training_schedule");
+        if (!grSchedule.get(scheduleId)) {
+            return "false";
+        }
+        var courseId = grSchedule.getValue("course");
 
-		var grEnrollment = new GlideRecord("x_1960572_training_enrollment");
-		grEnrollment.addQuery("user", userId);
-		grEnrollment.addQuery("schedule.course", courseId);
-		grEnrollment.query();
+        var grEnrollment = new GlideRecord("x_1960572_training_enrollment");
+        grEnrollment.addQuery("user", userId);
+        grEnrollment.addQuery("schedule.course", courseId);
+        grEnrollment.query();
 
-		return grEnrollment.getRowCount() >= 3 ? "true" : "false";
-	},
+        return grEnrollment.getRowCount() >= 3 ? "true" : "false";
+    },
+
+
+    // Reference Qualifier for User on Enrollment form
+    refQualEnrollmentUser: function() {
+        var scheduleId = this.getParameter('sysparm_schedule') || arguments[0];
+
+        gs.info("scheduleId recebido: " + scheduleId); // DEBUG
+
+        // Only show users with training.user or training.instructor role
+        var validUsers = [];
+        var grUserRole = new GlideRecord("sys_user_has_role");
+        grUserRole.addQuery("role.name", "IN",
+            "x_1960572_training.user,x_1960572_training.instructor");
+        grUserRole.addQuery("user.active", true);
+        grUserRole.query();
+
+        while (grUserRole.next()) {
+            validUsers.push(grUserRole.getValue("user"));
+        }
+
+        if (validUsers.length == 0) {
+            return "sys_id=NULL";
+        }
+
+        var qualifier = "sys_idIN" + validUsers.join(",");
+
+        // Exclude instructor of the selected schedule
+        if (scheduleId) {
+            var grSchedule = new GlideRecord("x_1960572_training_schedule");
+            if (grSchedule.get(scheduleId)) {
+                var instructorId = grSchedule.getValue("instructor");
+                if (instructorId) {
+                    qualifier += "^sys_id!=" + instructorId;
+                }
+            }
+        }
+
+        return qualifier;
+    },
 
     type: 'TrainingHubUtils'
 });]]></script>
@@ -167,13 +206,13 @@ TrainingHubUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-12 01:50:07</sys_created_on>
         <sys_id>54efba2183bc03107bfa9470ceaad300</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>TrainingHubUtils</sys_name>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
         <sys_update_name>sys_script_include_54efba2183bc03107bfa9470ceaad300</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-14 20:28:34</sys_updated_on>
+        <sys_updated_on>2026-05-15 06:06:53</sys_updated_on>
     </sys_script_include>
 </record_update>

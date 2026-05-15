@@ -19,7 +19,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-05-12 05:28:40</sys_updated_on>
         <table>x_1960572_training_course</table>
-        <ui_policy display_value="Show Error only when Integration Failure.">52c17325833443107bfa9470ceaad3f2</ui_policy>
+        <ui_policy display_value="Show Error only when Course Integration Failure.">52c17325833443107bfa9470ceaad3f2</ui_policy>
         <value/>
         <value_action>ignore</value_action>
         <visible>true</visible>

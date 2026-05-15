@@ -2,6 +2,6 @@
     <element db_object_id="0a8145e9833403107bfa9470ceaad353" extends="task" label="Training Enrollment" max_length="40" name="x_1960572_training_enrollment" type="collection">
         <element label="Reproval Reason" max_length="40" name="reproval_reason" type="string"/>
         <element label="Schedule" max_length="32" name="schedule" reference="x_1960572_training_schedule" type="reference"/>
-        <element default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="User" max_length="32" name="user" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element attributes="ref_qual_elements=schedule" default="javascript:gs.getUserID();" dynamic_default_value="90d1921e5f510100a9ad2572f2b477fe" label="User" max_length="32" name="user" reference="sys_user" reference_qual="javascript:new x_1960572_training.TrainingHubUtils().refQualEnrollmentUser(current.variables.schedule || current.schedule);" type="reference" use_dynamic_default="true" use_reference_qualifier="advanced"/>
     </element>
 </database>

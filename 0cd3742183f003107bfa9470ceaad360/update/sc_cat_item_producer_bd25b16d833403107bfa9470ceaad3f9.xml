@@ -92,14 +92,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-05-11 20:23:03</sys_created_on>
         <sys_id>bd25b16d833403107bfa9470ceaad3f9</sys_id>
-        <sys_mod_count>121</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>Request Enrollment</sys_name>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
         <sys_update_name>sc_cat_item_producer_bd25b16d833403107bfa9470ceaad3f9</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2026-05-14 19:26:30</sys_updated_on>
+        <sys_updated_on>2026-05-15 05:43:55</sys_updated_on>
         <table_name>x_1960572_training_enrollment</table_name>
         <taxonomy_topic/>
         <template/>
@@ -107,7 +107,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>118</version>
+        <version>120</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
