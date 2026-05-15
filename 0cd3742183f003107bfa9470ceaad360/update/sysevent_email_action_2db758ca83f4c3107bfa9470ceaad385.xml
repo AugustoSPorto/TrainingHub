@@ -36,7 +36,7 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p><span style="font-size: 10pt;">Hello ${opened_by.name},</span></p>
+        <message_html><![CDATA[<p><span style="font-size: 10pt;">Hello ${user.name},</span></p>
 <p><span style="font-size: 10pt;">Unfortunately, your enrollment request for the training below has been <strong>rejected </strong>by your manager.</span></p>
 <p>&nbsp;</p>
 <p><span style="font-size: 10pt;"><strong>Reproval reason:</strong></span></p>
@@ -58,7 +58,7 @@
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>opened_by</recipient_fields>
+        <recipient_fields>user</recipient_fields>
         <recipient_groups/>
         <recipient_users/>
         <reply_to/>
@@ -73,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2db758ca83f4c3107bfa9470ceaad385</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Enrollment Reproved</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
@@ -81,7 +81,7 @@
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
         <sys_update_name>sysevent_email_action_2db758ca83f4c3107bfa9470ceaad385</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-13 04:31:56</sys_updated_on>
+        <sys_updated_on>2026-05-15 20:34:54</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

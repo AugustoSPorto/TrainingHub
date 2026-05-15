@@ -36,7 +36,7 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p><span style="font-size: 10pt;">Hello ${opened_by.name},</span></p>
+        <message_html><![CDATA[<p><span style="font-size: 10pt;">Hello ${user.name},</span></p>
 <p><span style="font-size: 10pt;">Your enrollment request has been successfully submitted and is now awaiting approval from your manager.</span></p>
 <p>&nbsp;</p>
 <p><span style="font-size: 10pt;"><strong>Schedule Details:</strong></span></p>
@@ -48,14 +48,14 @@
 <p style="font-size: 10pt;">&nbsp;</p>
 <p><span style="font-size: 10pt;">You will be notified once your manager reviews your request.</span></p>
 <p>&nbsp;</p>
-<p><span style="font-size: 10pt;">Best regards,</span><br><span style="font-size: 10pt;">TrainingHub Team</span></p>]]></message_html>
+<p><span style="font-size: 10pt;">Best regards,</span><br><span style="font-size: 10pt;">TrainingHub TeamUser&nbsp;</span></p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Enrollment Requested</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>opened_by</recipient_fields>
+        <recipient_fields>user</recipient_fields>
         <recipient_groups/>
         <recipient_users/>
         <reply_to/>
@@ -70,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a4739c8283f4c3107bfa9470ceaad319</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Enrollment Requested</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Hub" source="x_1960572_training">0cd3742183f003107bfa9470ceaad360</sys_package>
@@ -78,7 +78,7 @@
         <sys_scope display_value="Training Hub">0cd3742183f003107bfa9470ceaad360</sys_scope>
         <sys_update_name>sysevent_email_action_a4739c8283f4c3107bfa9470ceaad319</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-13 04:30:56</sys_updated_on>
+        <sys_updated_on>2026-05-15 20:34:46</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
